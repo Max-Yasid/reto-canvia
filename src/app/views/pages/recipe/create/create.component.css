@@ -1,0 +1,55 @@
+.create-food {
+  padding: 30px;
+  text-align: center;
+}
+.textarea-input {
+  padding: 10px;
+  resize: none;
+  overflow: hidden;
+  height: 50px;
+  font-family: roboto;
+}
+.textarea-input {
+  width: 600px;
+  max-width: 80%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.textarea-input:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+textarea:nth-child(4) {
+  width: 900px;
+  height: 200px;
+}
+.summary-title {
+  margin-top: 25px;
+}
+.badges-title {
+  margin-top: 30px;
+}
+.nutrients-title {
+  margin-top: 30px;
+}
+.nutrient-amount {
+  width: 70px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+}
+.nutrient-amount:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.btn-update {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 150px;
+}

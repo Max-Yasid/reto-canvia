@@ -1,0 +1,50 @@
+<main class="edit-food">
+  <h2>Title</h2>
+  <textarea
+    class="textarea-input"
+    placeholder="Disable multiline textarea resize"
+    autofocus
+    [(ngModel)]="food.title"></textarea>
+  <h2 class="summary-title">Summary</h2>
+  <textarea
+    class="textarea-input"
+    placeholder="Your summary..."
+    [(ngModel)]="food.summary"></textarea>
+  <h2 class="badges-title">CHIPS</h2>
+  <mat-form-field class="edit-chips" appearance="fill">
+    <mat-label>Your chips...</mat-label>
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <mat-chip *ngFor="let chip of chipValues" (removed)="remove(chip)">
+        {{ chip }}
+        <button matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip>
+      <input
+        class="chips-input"
+        autocomplete="off"
+        placeholder="New Chip..."
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)" />
+    </mat-chip-list>
+  </mat-form-field>
+  <h2 class="nutrients-title">NUTRIENTS</h2>
+  <p *ngFor="let nutrient of food.nutrition.nutrients">
+    {{ nutrient.name }}:
+    <input
+      class="nutrient-amount"
+      type="number"
+      [(ngModel)]="nutrient.amount"
+      placeholder="Your name" />
+    {{ nutrient.unit }}
+  </p>
+  <button
+    (click)="updateFood($event)"
+    class="btn-update"
+    mat-raised-button
+    color="primary">
+    UPDATE
+  </button>
+</main>

@@ -1,0 +1,13 @@
+.home {
+}
+.food-card-link {
+  color: white;
+  text-decoration: none;
+}
+.foods {
+  flex-wrap: wrap;
+  padding: 50px;
+  display: flex;
+  gap: 20px 40px;
+  justify-content: center;
+}

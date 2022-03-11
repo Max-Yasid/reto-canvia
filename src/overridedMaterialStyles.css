@@ -1,0 +1,111 @@
+/*********************** TEMPLATE: HEADER *************************/
+.mat-form-field-wrapper {
+  color: white;
+  display: grid;
+  padding-bottom: 0;
+  place-items: center;
+}
+.autocomplete-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(255, 255, 255) !important;
+  overflow: hidden;
+  border-radius: 30px 0 0 30px;
+  padding-left: 15px;
+}
+.mat-form-field-flex {
+  background-color: transparent !important;
+}
+.mat-form-field-wrapper {
+  background-color: transparent;
+}
+.autocomplete-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  width: 40%;
+}
+.example-full-width {
+  width: 100%;
+}
+.mat-form-field-underline {
+  display: none;
+}
+.autocomplete {
+  margin-top: -6px;
+}
+.autocomplete-label {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+.mat-input-element {
+  color: var(--main-color) !important;
+  font-size: 15.5px;
+}
+.mat-input-element::placeholder {
+  color: var(--main-color);
+  font-size: 15.5px;
+}
+
+/************************ HOME PAGE **********************************/
+
+.food-card {
+  min-width: 240px;
+  max-width: 25%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.food-title {
+  line-height: 25px;
+}
+.food-card-content {
+  margin: 25px 0;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 33%;
+  flex-direction: row;
+}
+.home-paginator {
+  background-color: var(--main-color);
+  color: white;
+}
+.mat-select-min-line {
+  color: white;
+}
+
+/************************* FOOD DETAILS **************************/
+.chips-container {
+  width: 80%;
+  display: flex;
+}
+.detail-chip {
+  height: 10px;
+}
+
+/*************************** EDIT FOOD ****************************/
+.edit-form-field {
+  width: 700px;
+  max-width: 80%;
+}
+.edit-food-label {
+}
+.edit-chips {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  max-width: 80%;
+  background-color: white;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+}
+.example-chip-list {
+  width: 700px;
+}

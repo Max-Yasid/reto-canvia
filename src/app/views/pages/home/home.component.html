@@ -1,0 +1,40 @@
+<main class="home">
+  <div class="foods">
+    <mat-card *ngFor="let food of paginatedFoods" class="food-card">
+      <mat-card-title class="food-title">{{ food.title }} </mat-card-title>
+      <mat-card-content class="food-card-content">
+        <p
+          class="food-nutrition-info"
+          *ngFor="let nutrition of food.nutrition.nutrients">
+          {{ nutrition.name }}:
+          {{ nutrition.amount.toFixed(2) + nutrition.unit }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="food-card-actions">
+        <a [routerLink]="['recipe/details', food.id]" class="food-card-link">
+          <button
+            mat-raised-button
+            color="primary"
+            class="btn-food-details-card">
+            Details
+          </button>
+        </a>
+        <button
+          (click)="removeFood(food.id)"
+          mat-raised-button
+          color="warn"
+          class="btn-food-remove-card">
+          Remove
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <mat-paginator
+    class="home-paginator"
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    aria-label="Select page">
+  </mat-paginator>
+</main>

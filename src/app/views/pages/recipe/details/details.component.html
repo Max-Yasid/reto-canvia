@@ -1,0 +1,23 @@
+<main class="food-details">
+  <div class="food-info">
+    <h1 class="food-title">
+      {{ food.title }}
+      <mat-chip-list class="chips-container">
+        <mat-chip
+          class="detail-chip"
+          *ngFor="let chip of chipValues"
+          color="primary"
+          selected
+          >{{ chip }}
+        </mat-chip>
+      </mat-chip-list>
+    </h1>
+    <p [innerHTML]="food.summary"></p>
+  </div>
+  <div class="food-img">
+    <a class="edit-link" [routerLink]="['../../edit', id]"
+      ><button mat-raised-button color="primary">edit</button></a
+    >
+    <img [src]="food.image" alt="food" />
+  </div>
+</main>
